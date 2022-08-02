@@ -1,9 +1,55 @@
 body {
   background-color: black;
   height: 100vh;
-  .box {
-    height: 100px;
-    width: 100px;
-    background-color: purple;
+
+  .clock {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .dot {
+      background-color: #ffffff;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .hour,
+    .min {
+      position: absolute;
+      background-color: #ffffff;
+      transform-origin: 50% 100%;
+      border-radius: 2px;
+    }
+
+    .hour {
+      width: 5px;
+      height: 35%;
+      top: 15%;
+    }
+
+    .min {
+      width: 3px;
+      height: 40%;
+      top: 10%;
+    }
+
+    &.white {
+      border: 2px solid #eee;
+      .dot {
+        background-color: #eee;
+      }
+      .hour,
+      .min {
+        background-color: #eee;
+      }
+    }
   }
 }

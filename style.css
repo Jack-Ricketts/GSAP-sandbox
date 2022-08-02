@@ -4660,9 +4660,42 @@ table {
 body {
   background-color: black;
   height: 100vh; }
-  body .box {
-    height: 100px;
-    width: 100px;
-    background-color: purple; }
+  body .clock {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    body .clock .dot {
+      background-color: #ffffff;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%; }
+    body .clock .hour,
+    body .clock .min {
+      position: absolute;
+      background-color: #ffffff;
+      transform-origin: 50% 100%;
+      border-radius: 2px; }
+    body .clock .hour {
+      width: 5px;
+      height: 35%;
+      top: 15%; }
+    body .clock .min {
+      width: 3px;
+      height: 40%;
+      top: 10%; }
+    body .clock.white {
+      border: 2px solid #eee; }
+      body .clock.white .dot {
+        background-color: #eee; }
+      body .clock.white .hour,
+      body .clock.white .min {
+        background-color: #eee; }
 
 /*# sourceMappingURL=style.css.map */
