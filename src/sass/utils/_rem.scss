@@ -1,0 +1,55 @@
+// @use "sass:math";
+
+// -----------------------------------------------------------------------------
+// STRIP UNIT
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+  // @return math.div($num, $num * 0 + 1);
+}
+
+// -----------------------------------------------------------------------------
+// EM/REM CALC
+// Usage examples:
+//  - rem(10px)
+//  - rem(10)
+//  - rem(10 20)
+//  - rem(10 20 30 40)
+//  - rem(20 auto)
+
+$basepx: 16px !default;
+
+@function emrem($values, $base-value: $basepx, $type: "em") {
+  $max: length($values);
+  $newValues: ();
+
+  @if $type == "em" {
+    $type: 1em;
+  } @else {
+    $type: 1rem;
+  }
+
+  @for $i from 1 through $max {
+    $iVal: nth($values, $i);
+
+    @if $iVal != auto {
+      $iVal: strip-unit($iVal) / strip-unit($base-value) * $type;
+    }
+
+    $newValues: append($newValues, $iVal);
+  }
+
+  @if $max == 1 {
+    @return nth($newValues, 1);
+  } @else {
+    @return $newValues;
+  }
+}
+
+@function em($values, $base-value: $basepx) {
+  @return emrem($values, $base-value, "em");
+}
+
+@function rem($values, $base-value: $basepx) {
+  @return emrem($values, $base-value, "rem");
+}

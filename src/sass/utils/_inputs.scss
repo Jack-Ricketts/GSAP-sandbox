@@ -1,0 +1,22 @@
+.input {
+  height: rem(54);
+  color: $sand-500;
+  font-family: $secondary-ff;
+  border-radius: rem(10);
+  border: 2px solid transparent;
+  padding-left: rem(20);
+  padding-right: rem(20);
+
+  &:focus {
+    box-sizing: border-box;
+    border: 2px solid $yellow-400;
+  }
+
+  &:disabled {
+    color: $black;
+  }
+
+  &:invalid {
+    border: 2px solid $red;
+  }
+}

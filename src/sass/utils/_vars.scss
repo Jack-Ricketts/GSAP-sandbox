@@ -1,0 +1,44 @@
+// color variables - nice
+$green-700: #10604a;
+$green-400: #81a79c;
+$green-300: #b5d2ca;
+$brick-700: #a74339;
+$brick-600: #c3554a;
+$yellow-500: #e8ab18;
+$yellow-400: #ffc843;
+$orange-400: #ff9d45;
+$sand-500: #a9a29c;
+$sand-300: #eae1ce;
+$sand-200: #f6ede6;
+$white: #ffffff;
+$black: #241f23;
+$red: #ff0000;
+
+$colors: (
+  "green-700": $green-700,
+  "green-400": $green-400,
+  "green-300": $green-300,
+  "brick-700": $brick-700,
+  "brick-600": $brick-600,
+  "yellow-500": $yellow-500,
+  "yellow-400": $yellow-400,
+  "orange-400": $orange-400,
+  "sand-500": $sand-500,
+  "sand-300": $sand-300,
+  "sand-200": $sand-200,
+  "white": $white,
+  "black": $black,
+  "red": $red,
+);
+
+// looping through each colours - nice
+
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background: $value;
+  }
+
+  .c-#{$color} {
+    color: $value;
+  }
+}

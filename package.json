@@ -1,0 +1,21 @@
+{
+  "name": "daumix-starter-pack",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run watch\" \"vite\"",
+    "watch": "node-sass -rw src/sass/ -o ./ --source-map ./",
+    "build": "node-sass src/sass/ -o ./ --source-map ./ && vite build --base=./",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "node-sass": "^4.14.1",
+    "sass": "^1.51.0",
+    "vite": "^2.9.7",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4",
+    "swiper": "^8.2.4"
+  }
+}

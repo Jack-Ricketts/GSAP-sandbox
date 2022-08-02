@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Recoleta";
+  src: url("fonts/Recoleta-SemiBold.woff2") format("woff2"),
+    url("fonts/Recoleta-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+$primary-ff: "Recoleta", serif;
+$secondary-ff: "Inter", sans-serif;
+
+.headline-xl {
+  font-size: rem(64);
+  font-weight: 600;
+  line-height: 1.34375;
+  letter-spacing: -0%;
+}
+
+.headline-l {
+  font-size: rem(42);
+  font-weight: 600;
+  line-height: 1.33333;
+  letter-spacing: 1%;
+}
+
+.headline-l-lg {
+  @include mq(large up) {
+    font-size: rem(42);
+    font-weight: 600;
+    line-height: 1.33333;
+    letter-spacing: 1%;
+  }
+}
+
+.headline-m {
+  font-size: rem(32);
+  font-weight: 600;
+  line-height: 1.34375;
+  letter-spacing: 2%;
+}
+
+.headline-m-md {
+  @include mq(between small large) {
+    font-size: rem(32);
+    font-weight: 600;
+    line-height: 1.34375;
+    letter-spacing: 2%;
+  }
+}
+
+.headline-m-sm-md {
+  @include mq(large down) {
+    font-size: rem(32);
+    font-weight: 600;
+    line-height: 1.34375;
+    letter-spacing: 2%;
+  }
+}
+
+.headline-s {
+  font-size: rem(24);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 2%;
+}
+
+.headline-s-sm {
+  @include mq(small down) {
+    font-size: rem(24);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 2%;
+  }
+}
+
+.headline-ss {
+  font-size: rem(20);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 2%;
+}
+
+.headline-ss-md-lg {
+  @include mq(small up) {
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 2%;
+  }
+}
+
+.subheadline {
+  font-size: rem(20);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0%;
+}
+
+.subheadline-md-lg {
+  @include mq(small up) {
+    font-size: rem(20);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0%;
+  }
+}
+
+.body {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 2%;
+}
+
+.body-sm {
+  @include mq(small down) {
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 2%;
+  }
+}
+
+.body-bold {
+  font-size: rem(16);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 2%;
+}
+
+.body-bold-sm {
+  @include mq(small down) {
+    font-size: rem(16);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 2%;
+  }
+}
+
+.body-s {
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1.4286;
+  letter-spacing: 2%;
+}
+
+.body-s-bold {
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 1.4286;
+  letter-spacing: 2%;
+}
+
+.title {
+  font-size: rem(14);
+  font-weight: 600;
+  line-height: 1.4286;
+  letter-spacing: 2%;
+}
+
+.link {
+  font-size: rem(16);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 2%;
+}
