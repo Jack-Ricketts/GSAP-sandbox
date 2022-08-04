@@ -49,7 +49,7 @@ function timeShift(event) {
   b += event.deltaY * 0.0225;
   c += event.deltaY * 0.028;
   b = Math.min(Math.max(0, b), 200);
-  c = Math.min(Math.max(0, c), 255);
+  c = Math.min(Math.max(5, c), 255);
   h.style.transform = `rotate(${shiftHour}deg)`;
   m.style.transform = `rotate(${shiftMinute}deg)`;
   body.style.backgroundColor = "rgb(" + 0 + "," + b + "," + c + ")";
