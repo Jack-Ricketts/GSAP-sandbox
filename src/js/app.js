@@ -34,6 +34,7 @@ import gsap from "gsap";
 
 let shiftHour = 0;
 let shiftMinute = 0;
+let am = true;
 const body = document.querySelector("body");
 const el = document.querySelector(".clock");
 const h = document.querySelector(".hour");
@@ -46,8 +47,13 @@ function timeShift(event) {
   event.preventDefault();
   shiftHour += event.deltaY * 0.04;
   shiftMinute += event.deltaY * 0.96;
-  b += event.deltaY * 0.0225;
-  c += event.deltaY * 0.028;
+  if (am == true) {
+    b += event.deltaY * 0.0225;
+    c += event.deltaY * 0.028;
+  } else {
+    b -= event.deltaY * 0.0225;
+    c -= event.deltaY * 0.028;
+  }
   b = Math.min(Math.max(0, b), 200);
   c = Math.min(Math.max(5, c), 255);
   h.style.transform = `rotate(${shiftHour}deg)`;
@@ -55,5 +61,4 @@ function timeShift(event) {
   body.style.backgroundColor = "rgb(" + 0 + "," + b + "," + c + ")";
   console.log(b, c);
 }
-
 el.onwheel = timeShift;
